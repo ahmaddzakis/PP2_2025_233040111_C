@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Latihan1_1 {
+public class Latihan1_GPT {
     public static void main(String[] args) {
         // Membuat frame utama
         JFrame frame = new JFrame("Kalkulator Sederhana");

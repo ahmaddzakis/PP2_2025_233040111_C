@@ -4,8 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
-public class LatihanAjah {
+public class Latihan2 {
     public static void main(String[] args) {
         // 1. Buat Frame
         JFrame frame = new JFrame("Konversi Celcius ke Fahrenheit");
@@ -23,6 +25,24 @@ public class LatihanAjah {
         JButton buttonK = new JButton("Konversi");
         JLabel hasil = new JLabel("");
 
+        // Kustomisasi sendiri hehe
+        labelC.setFont(new Font("Arial", Font.BOLD, 18));
+        textC.setFont(new Font("Arial", Font.ITALIC, 18));
+        textC.setHorizontalAlignment(JTextField.CENTER);
+        labelF.setFont(new Font("Arial", Font.BOLD, 18));
+        hasil.setFont(new Font("Arial", Font.ITALIC, 18));
+        buttonK.setFont(new Font("Arial", Font.BOLD, 18));
+        buttonK.setBackground(Color.RED);
+        buttonK.setBounds(10, 10, 100, 30);
+
+        // Mouse Listener untuk Button
+        MouseAdapter adapter = new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                buttonK.setBackground(Color.BLUE);
+            }
+        };
+
         // 4. Menampilkan ke layar
         frame.add(labelC);
         frame.add(textC);
@@ -30,6 +50,7 @@ public class LatihanAjah {
         frame.add(hasil);
         frame.add(kosongan);
         frame.add(buttonK);
+
 
         // 5. Tambahkan EventListener untuk tombol "Konversi"
         buttonK.addActionListener(new ActionListener() {

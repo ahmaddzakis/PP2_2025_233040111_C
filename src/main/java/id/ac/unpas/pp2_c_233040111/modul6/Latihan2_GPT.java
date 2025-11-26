@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Latihan2 {
+public class Latihan2_GPT {
     public static void main(String[] args) {
         // Membuat Frame
         JFrame frame = new JFrame("Konverter Suhu dari Celcius ke Fahrenheit");
